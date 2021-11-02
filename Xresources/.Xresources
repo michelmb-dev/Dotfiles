@@ -1,0 +1,51 @@
+﻿urxvt.scrollBar: false
+urxvt.geometry: 125x45
+urxvt.cursorBlink: true
+urxvt.cursorUnderline: false
+urxvt.saveline: 2048
+urxvt.scrollBar_right: false
+urxvt.urgentOnBell: false
+urxvt.depth: 24
+urxvt.iso14755: false
+urxvt.internalBorder: 10
+urxvt.letterSpace: 1
+urxvt.lineSpace: 0
+urxvt.font: xft:Iosevka Mayukai Monolite,Iosevka NF:size=14:antialias=true
+urxvt.boldFont: xft:Iosevka Mayukai Monolite,Iosevka NF:Bold:size=14:antialias=true
+urxvt.italicFont: xft:Iosevka Mayukai Monolite,Iosevka NF:Italic:size=14:antialias=true
+urxvt.perl-ext-common: default,matcher
+urxvt.url-launcher: google-chrome-stable
+urxvt.matcher.button:   2
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.antialias: 1
+Xft.rgba: rgb 
+
+
+!================================
+! tango theme
+!================================
+
+*background:              #1e2128
+*foreground:              #e2e2e5
+*color0:                  #2e3436
+*color1:                  #cc0000
+*color2:                  #4e9a06
+*color3:                  #c4a000
+*color4:                  #3465a4
+*color5:                  #75507b
+*color6:                  #06989a
+*color7:                  #d3d7cf
+*color8:                  #555753
+*color9:                  #ef2929
+*color10:                 #8ae234
+*color11:                 #fce94f
+*color12:                 #729fcf
+*color13:                 #ad7fa8
+*color14:                 #34e2e2
+*color15:                 #eeeeec
+
+! vim: ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+
+
