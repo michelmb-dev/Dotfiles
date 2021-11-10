@@ -52,18 +52,18 @@ font-0 = "Liberation:size=12;3"
 font-1 = "FontAwesome:size=16;4"
 font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=26;6"
 
-modules-left = i3 term code browser mail files settings
+modules-left = i3 term code browser mail files settings capture
 modules-center = xwindow 
 modules-right = audio-control date sysmenu 
 ; 
 tray-detached = true
-tray-offset-x = -380
+tray-offset-x = -300
 tray-offset-y = 0
 tray-padding = 2
 tray-maximize = 50
 tray-scale = 1
 tray-position = right
-tray-background = #31313
+tray-background = #3131300
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -94,7 +94,7 @@ font-0 = "Liberation:size=12;3"
 font-1 = "FontAwesome:size=16;4"
 font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=26;6"
 
-modules-left = i3 term code browser mail files settings
+modules-left = i3 term code browser mail files settings capture
 modules-center = xwindow 
 modules-right = date sysmenu 
 
@@ -125,7 +125,7 @@ font-0 = "Liberation:size=12;3"
 font-1 = "FontAwesome:size=16;4"
 font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=26;6"
 
-modules-left = i3 term code browser mail files settings
+modules-left = i3 term code browser mail files settings capture
 modules-center = xwindow 
 modules-right = date sysmenu 
 
@@ -252,7 +252,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp0s4
+interface = enp4s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -461,6 +461,13 @@ content-padding = 1
 content = 
 click-left = lxappearance &
 
+[module/capture]
+type = custom/text
+content-foreground = #ffffff
+content-padding = 1 
+content = 
+click-left = gnome-screenshot -i &
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
@@ -468,6 +475,7 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 ;pseudo-transparency = true
+
 
 [global/wm]
 margin-top = 5
