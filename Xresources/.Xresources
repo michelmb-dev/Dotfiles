@@ -1,26 +1,33 @@
-﻿urxvt.scrollBar: false
-urxvt.geometry: 125x45
+﻿! ===============================
+!       urxvt
+! ===============================
+
+urxvt.scrollBar: false
 urxvt.cursorBlink: true
 urxvt.cursorUnderline: false
-urxvt.saveline: 2048
 urxvt.scrollBar_right: false
 urxvt.urgentOnBell: false
 urxvt.depth: 24
+urxvt*utf8:	true
 urxvt.iso14755: false
 urxvt.internalBorder: 10
-urxvt.letterSpace: 1
-urxvt.lineSpace: 0
-urxvt.font: xft:Iosevka Mayukai Monolite,Iosevka NF:size=14:antialias=true
-urxvt.boldFont: xft:Iosevka Mayukai Monolite,Iosevka NF:Bold:size=14:antialias=true
-urxvt.italicFont: xft:Iosevka Mayukai Monolite,Iosevka NF:Italic:size=14:antialias=true
-urxvt.perl-ext-common: default,matcher
-urxvt.url-launcher: google-chrome-stable
-urxvt.matcher.button:   2
-Xft.hinting: 1
-Xft.hintstyle: hintslight
-Xft.antialias: 1
-Xft.rgba: rgb 
+urxvt.letterSpace: 0
 
+urxvt*font: xft:Iosevka Mayukai Monolite:regular:size=12
+urxvt*boldFont: xft:Iosevka Mayukai Monolite:bold:size=12
+
+urxvt.perl-ext-common:  default,matcher
+urxvt.url-launcher:  google-chrome-stable
+urxvt.matcher.button:  2
+
+! ===============================
+! Xft
+! ===============================
+Xft.hinting: 1
+Xft.hintstyle:  hintslight
+Xft.antialias:  true
+Xft.rgba:  subpixel
+Xft.dpi:  96
 
 !================================
 ! tango theme
