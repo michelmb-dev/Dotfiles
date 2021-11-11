@@ -1,36 +1,43 @@
 ﻿! ===============================
 !       urxvt
 ! ===============================
+urxvt.scrollBar:        false
+urxvt.cursorBlink:      true
+urxvt.cursorUnderline:  false
+urxvt.scrollBar_right:  false
+urxvt.urgentOnBell:     false
+urxvt.depth:            24
+urxvt*utf8:	            true
+urxvt.iso14755:         false
+urxvt.iso14755_52:      false
+urxvt.internalBorder:   10
+urxvt.letterSpace:      -1
 
-urxvt.scrollBar: false
-urxvt.cursorBlink: true
-urxvt.cursorUnderline: false
-urxvt.scrollBar_right: false
-urxvt.urgentOnBell: false
-urxvt.depth: 24
-urxvt*utf8:	true
-urxvt.iso14755: false
-urxvt.internalBorder: 10
-urxvt.letterSpace: 0
+! urxvt*font:            xft:Iosevka Mayukai Monolite:regular:size=12
+! urxvt*boldFont:        xft:Iosevka Mayukai Monolite:bold:size=12
 
-urxvt*font: xft:Iosevka Mayukai Monolite:regular:size=12
-urxvt*boldFont: xft:Iosevka Mayukai Monolite:bold:size=12
+URxvt*font:             xft:Menlo for Powerline:regular:size=11
+URxvt*boldFont:         xft:Menlo for Powerline:bold:size=11
 
-urxvt.perl-ext-common:  default,matcher
-urxvt.url-launcher:  google-chrome-stable
-urxvt.matcher.button:  2
+urxvt.perl-ext-common:  default,matcher,resize-font
+urxvt.url-launcher:     google-chrome-stable
+urxvt.matcher.button:   2
+
+urxvt.keysym.C-Up:      resize-font:bigger
+urxvt.keysym.C-Down:    resize-font:smaller
+
 
 ! ===============================
 ! Xft
 ! ===============================
-Xft.hinting: 1
-Xft.hintstyle:  hintslight
-Xft.antialias:  true
-Xft.rgba:  subpixel
-Xft.dpi:  96
+Xft.hinting:            1
+Xft.hintstyle:          hintslight
+Xft.antialias:          true
+Xft.rgba:               subpixel
+Xft.dpi:                96
 
 !================================
-! tango theme
+! tango theme colors
 !================================
 
 *background:              #1e2128
