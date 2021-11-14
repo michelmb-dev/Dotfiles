@@ -98,12 +98,24 @@ alias free='free -mt'
 # un VRAI éditeur de texte ;)
 export EDITOR=/usr/bin/vim
 
-#-------------------------------------------------------------------------------
+# Touche de commande
+bindkey "^[[7~" beginning-of-line
+bindkey "\e[H" beginning-of-line 
+bindkey "\e[F" end-of-line 
+bindkey "\e[F" end-of-line 
+bindkey "^[[2~" overwrite-mode
+bindkey "\e[3~" delete-char
+bindkey "^F" history-incremental-search-backward
+bindkey "^[Od" backward-word
+bindkey "^[Oc" forward-word
+bindkey "^[[3^" backward-kill-line
+bindkey "^[[5^" up-line-or-history
+bindkey "^[[6^" down-line-or-history
+bindkey "^[[A" up-line-or-search
+bindkey "^[[B" down-line-or-search
+
+
 # Zsh-Syntax-highlighting
-#-------------------------------------------------------------------------------
-
 source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-
-
 source '/home/michel/.config/zsh/git-prompt/git-prompt.zsh'
 source '/home/michel/.config/zsh/git-prompt/themes/arch_prompt.zsh'
