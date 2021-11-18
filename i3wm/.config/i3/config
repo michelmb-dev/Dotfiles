@@ -210,6 +210,11 @@ bindsym $mod+r mode "resize"
 # Gaps
 for_window [class=".*"] border pixel 2
 gaps inner 10
+smart_borders on
+smart_gaps on
+
+# Désactive capslock
+#exec --no-startup-id setxkbmap -option caps:none
 
 # Colors 
 set_from_resource $active color10
@@ -228,5 +233,3 @@ set_from_resource $active color10
 # Polybar
 exec_always --no-startup-id "killall polybar; polybar -r Primary | polybar -r Secondary | polybar -r Tablet"
 
-# Pamac-tray
-exec_always --no-startup-id pamac-tray
