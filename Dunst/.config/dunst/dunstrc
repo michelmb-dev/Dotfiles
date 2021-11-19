@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 5x35
+    offset = 10x40
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -58,7 +58,7 @@
     progress_bar_min_width = 150
 
     # Set the maximum width for the progress bar
-    progress_bar_max_width = (0, 300)
+    progress_bar_max_width = 300
 
 
     # Show how many messages are currently hidden (because of
@@ -82,11 +82,11 @@
     horizontal_padding = 8
 
     # Padding between text and icon.
-    text_icon_padding = 4
+    text_icon_padding = 1
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "#ff0000"
@@ -297,14 +297,14 @@
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
-    new_icon = ~/.config/dunst/icons/information.png
+    new_icon = ~/.config/dunst/icons/low_notification.png
 
 [urgency_normal]
     background = "#313131"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
-    new_icon = ~/.config/dunst/icons/question.png
+    new_icon = ~/.config/dunst/icons/normal_notification.png
 
 [urgency_critical]
     background = "#313131"
@@ -312,7 +312,7 @@
     frame_color = "#ff0000"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    new_icon = ~/.config/dunst/icons/warning.png
+    new_icon = ~/.config/dunst/icons/critical_notification.png
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
