@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 400
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -115,7 +115,7 @@
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 2 
+    line_height = 2
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -314,6 +314,17 @@
     # Icon for notifications with critical urgency, uncomment to enable
     new_icon = ~/.config/dunst/icons/critical_notification.png
 
+[NetworkManager_on]
+    appname = "NetworkManager"
+    summary = "*Connexion établie*"
+    new_icon = ~/.config/dunst/icons/network_connected.png
+    frame_color = "#00ff00"
+
+[NetworkManager_off]
+    appname = "NetworkManager"
+    summary = "*Déconnecté*"
+    new_icon = ~/.config/dunst/icons/network_disconnected.png
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #
@@ -386,10 +397,6 @@
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
-
-[script-changevolume]
-    summary = "*script*"
-    script = ~/.config/dunst/scripts/changevolume.sh
 
 #[espeak]
 #    summary = "*"
