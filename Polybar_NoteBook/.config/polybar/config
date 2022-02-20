@@ -8,11 +8,10 @@
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
+;   		To learn more about how to configure Polybar
+;   			go to https://github.com/polybar/polybar
 ;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
+;   			The README contains a lot of information
 ;
 ;==========================================================
 
@@ -22,25 +21,22 @@ background-alt = #444
 foreground = ${xrdb:foreground}
 foreground-alt = #999
 primary = #8ae234
-secondary = #e60053
+secondary = #a70703
 alert = #bd2c40
 
 ;--------------- BARS-----------------;
 
 [bar/default]
-;monitor = ${env:MONITOR:DisplayPort-1}
 width = 100%
 height = 28
 radius = 0
 fixed-center = true
 dpi-x = 96
 dpi-y = 96
-#background = ${colors.background}
 background = #31313a
 foreground = ${colors.foreground}
 
 underline-size = 2
-underline-color = #a70703
 
 padding-left = 0
 padding-right = 0
@@ -48,73 +44,95 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Liberation:size=10;1"
+font-0 = "Liberation:bold:size=10;1"
 font-1 = "FontAwesome:size=12;2"
 font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=20;3"
 
-modules-left = i3 term code browser mail files settings
+modules-left = i3
 modules-center = xwindow 
-modules-right =  alsa battery date sysmenu 
+modules-right = music alsa battery date sysmenu 
 
-;tray-detached = true
-;tray-offset-x = -380
-;tray-offset-y = 0
 tray-padding = 2
-;tray-maximize = 50
 tray-scale = 1
 tray-position = right
-tray-background = #31313
+tray-background = #313131
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-###################################################
 
+[bar/bsp]
+inherit = bar/default
+modules-left = bspwm
+
+###################################################
 
 ;----------------Modules config-----------------;
 
-#---------- Module title------------
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:60:...%
+label = %title:0:80:...%
 label-separator = |
 
-#---------- Module i3------------
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index% %icon%
+label-focused-underline = ${colors.secondary}
+label-focused-padding = 3
+
+label-occupied = %index% %icon%
+label-occupied-padding = 3
+
+label-urgent = %index% %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 3
+
+label-empty = %index% %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 3
+
+ws-icon-0 = 1;
+ws-icon-2 = 2;
+ws-icon-1 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 4
+label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
 
-; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = #a70703
+label-focused = %index% %icon% 
+label-focused-underline = ${colors.secondary}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %index% %icon%
 label-unfocused-padding = 2
-label-unfocused-background = ${colors.background}
 
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index% %icon% 
 label-visible-background = ${self.label-unfocused-background}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index% %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-; Separator in between workspaces
-; label-separator = |
-
+ws-icon-0 = 1;
+ws-icon-2 = 2;
+ws-icon-1 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
 
 [module/mpd]
 type = internal/mpd
@@ -167,44 +185,6 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
-[module/wlan]
-type = internal/network
-interface = wls3
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = enp0s4
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
 [module/date]
 type = internal/date
 interval = 1
@@ -228,14 +208,25 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 interval = 5
 
+[module/music]
+type = custom/script
+exec-if = ~/.config/polybar/scripts/music.sh --isPlaying
+exec = ~/.config/polybar/scripts/music.sh --title
+click-left = i3-msg workspace 8
+interval = 5
+format= <label>
+format-foreground= ${root.foreground}
+label = %output%
+
+
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = AC
-full-at = 98
+adapter = ADP1
+full-at = 95
 
 format-charging = <animation-charging> <label-charging>
-
+format-charging-underline = #00000000
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 

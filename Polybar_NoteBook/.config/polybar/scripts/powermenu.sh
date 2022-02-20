@@ -26,6 +26,7 @@ case $chosen in
     $lock)
 		if [[ -f /usr/bin/dm-tool ]]; then
 			dm-tool lock
+			systemctl supend
 		elif [[ -f /usr/bin/i3lock ]]; then
 			i3lock
 		fi
