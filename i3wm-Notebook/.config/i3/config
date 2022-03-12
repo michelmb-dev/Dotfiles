@@ -106,20 +106,24 @@ assign [class="Google-chrome|Firefox"]          $ws2
 for_window [class="Google-chrome|Firefox"]      focus
 
 # Workspace 3 (Terminal)
-assign [class="URxvt"]                          $ws3
-for_window  [class="URxvt"]                     focus
+assign [class="URxvt"]                           $ws3
+for_window  [class="URxvt"]                      focus
 
 # Workspace 4 (fichiers)
 assign [class="Thunar"]                          $ws4
 for_window  [class="Thunar"]                     focus
+
+# Workspace 7 (images/paint)
+assign [class="Gimp"]                            $ws7
+for_window  [class="Gimp"]                       focus
 
 # Workspace 8 (git)
 assign [class="GitKraken|gitkraken"]             $ws8
 for_window [class="GitKraken|gitkraken"]         focus
 
 # Workspace 9 (spotify)
-assign [class="Spotify"]                          $ws9
-for_window  [class="Spotify"]                     focus
+assign [class="Spotify"]                         $ws9
+for_window  [class="Spotify"]                    focus
 
 
 # switcher entre les espaces de travail
