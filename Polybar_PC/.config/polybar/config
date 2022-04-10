@@ -55,15 +55,8 @@ font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=26;6"
 modules-left = i3 term code browser mail files settings capture
 modules-center = xwindow 
 modules-right = audio-control date sysmenu 
-; 
-tray-detached = true
-tray-offset-x = -300
-tray-offset-y = 0
-tray-padding = 2
-tray-maximize = 50
-tray-scale = 1
+
 tray-position = right
-tray-background = #3131300
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -106,8 +99,8 @@ width = 100%
 height = 35
 radius = 0
 fixed-center = true
-dpi-x = 128
-dpi-y = 128
+dpi-x = 96
+dpi-y = 96
 #background = ${colors.background}
 background = #31313a
 foreground = ${colors.foreground}
