@@ -29,15 +29,13 @@ font pango:liberation 10
 # Policikit agent for authentification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
 
 # execute program at startup
 exec --no-startup-id nitrogen --restore &
-exec --no-startup-id picom -b
-
-
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-#exec --no-startup-id /usr/lib/pentablet/pentablet.sh &
+##exec --no-startup-id picom -b
+exec --no-startup-id /usr/lib/pentablet/pentablet.sh /mini &
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -164,6 +162,7 @@ for_window [class="Seahorse"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Font-manager"] floating enable
+for_window [class="zoom"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
