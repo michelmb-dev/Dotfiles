@@ -18,11 +18,11 @@ window {
     text-color:                     @fg;
 	border:							2px;
 	border-color:					@ac;
-    border-radius:                  0px;
+    border-radius:                  12px;
 	width:							230px;
     location:                       center;
-    x-offset:                       845px;
-    y-offset:                       -395px;
+    x-offset:                       840px;
+    y-offset:                       -385px;
 }
 
 prompt {
