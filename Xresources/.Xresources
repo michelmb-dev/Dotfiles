@@ -2,22 +2,25 @@
 !       urxvt
 ! ===============================
 urxvt.scrollBar:        false
-urxvt.cursorBlink:      true
-urxvt.cursorUnderline:  false
+urxvt.cursorBlink:      false
+urxvt.cursorUnderline:  true
 urxvt.scrollBar_right:  false
 urxvt.urgentOnBell:     false
 urxvt.depth:            24
 urxvt*utf8:	            true
 urxvt.iso14755:         false
 urxvt.iso14755_52:      false
-urxvt.internalBorder:   10
+urxvt.internalBorder:   12
 urxvt.letterSpace:      -1
 
 ! urxvt*font:            xft:Iosevka Mayukai Monolite:regular:size=12
 ! urxvt*boldFont:        xft:Iosevka Mayukai Monolite:bold:size=12
 
-URxvt*font:             xft:Menlo for Powerline:regular:size=11
-URxvt*boldFont:         xft:Menlo for Powerline:bold:size=11
+! URxvt*font:             xft:Menlo for Powerline:regular:size=11
+! URxvt*boldFont:         xft:Menlo for Powerline:bold:size=11
+
+URxvt*font:             xft:Fira Code:regular:size=12
+URxvt*boldFont:         xft:Fira Code:bold:size=12
 
 urxvt.perl-ext-common:  default,matcher,resize-font
 urxvt.url-launcher:     google-chrome-stable

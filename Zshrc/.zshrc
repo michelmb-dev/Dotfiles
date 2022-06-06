@@ -119,3 +119,15 @@ bindkey "^[[B" down-line-or-search
 source '/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 source '/home/michel/.config/zsh/git-prompt/git-prompt.zsh'
 source '/home/michel/.config/zsh/git-prompt/themes/arch_prompt.zsh'
+
+
+# For android studio
+export ANDROID_HOME=/home/michel/Android/Sdk
+export ANDROID_SDK_ROOT=/home/michel/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platforms-tools
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+export CAPACITOR_ANDROID_STUDIO_PATH=/usr/bin/android-studio
+
+
+alias emul='emulator -avd Nexus_6_API_30 -netdelay none -netspeed full &'

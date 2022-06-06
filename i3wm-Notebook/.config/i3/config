@@ -113,9 +113,13 @@ for_window  [class="URxvt"]                      focus
 assign [class="Thunar"]                          $ws4
 for_window  [class="Thunar"]                     focus
 
-# Workspace 7 (images/paint)
+# Workspace 6 (text editor)
 assign [class="Gimp"]                            $ws7
 for_window  [class="Gimp"]                       focus
+
+# Workspace 7 (images/paint)
+assign [class="Xed|libreoffice-writer|libreoffice|libreoffice writer"]          $ws6
+for_window  [class="Xed|libreoffice-writer|libreoffice|libreoffice writer"]     focus
 
 # Workspace 8 (git)
 assign [class="GitKraken|gitkraken"]             $ws8
