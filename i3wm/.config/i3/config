@@ -34,8 +34,8 @@ exec --no-startup-id nm-applet
 
 # execute program at startup
 exec --no-startup-id nitrogen --restore &
-##exec --no-startup-id picom -b
-exec --no-startup-id /usr/lib/pentablet/pentablet.sh /mini &
+exec --no-startup-id picom -b
+#exec --no-startup-id /usr/lib/pentablet/pentablet.sh /mini &
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -163,6 +163,8 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Font-manager"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="obs"] floating enable
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,10 +209,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-for_window [class=".*"] border pixel 2
-gaps inner 10
+for_window [class=".*"] border pixel 0
+gaps inner 8
 smart_borders on
-smart_gaps on
+#smart_gaps on
+
 
 # Désactive capslock
 #exec --no-startup-id setxkbmap -option caps:none

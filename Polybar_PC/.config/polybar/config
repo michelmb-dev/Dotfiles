@@ -35,8 +35,7 @@ radius = 0
 fixed-center = true
 dpi-x = 96
 dpi-y = 96
-#background = ${colors.background}
-background = #31313a
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 2
@@ -49,8 +48,8 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Liberation:size=12;3"
-font-1 = "FontAwesome:size=16;4"
-font-2 = "Iosevka Mayukai Monolite,Iosevka NF:size=26;6"
+font-1 = "Iosevka NF:size=26;6"
+font-2 = "FontAwesome:size=16;4"
 
 modules-left = i3 term code browser mail files settings capture
 modules-center = xwindow 
@@ -70,8 +69,7 @@ radius = 0
 fixed-center = true
 dpi-x = 96
 dpi-y = 96
-#background = ${colors.background}
-background = #31313a
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 underline-size = 2
@@ -102,7 +100,6 @@ fixed-center = true
 dpi-x = 96
 dpi-y = 96
 #background = ${colors.background}
-background = #31313a
 foreground = ${colors.foreground}
 
 underline-size = 2
