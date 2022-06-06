@@ -1,4 +1,18 @@
 
+configuration {
+    font:                       "Liberation 11";
+    show-icons:                 true;
+    icon-theme:                 "Papirus";
+    drun-display-format:        "{name}";
+    fullscreen:                 false;
+	sidebar-mode: 				false;
+}
+
+window {
+    border-radius:               12;
+    border:                      2;
+}
+
 * {
     selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
     foreground:                  rgba ( 196, 203, 212, 100 % );
@@ -19,7 +33,9 @@
     lightfg:                     rgba ( 88, 104, 117, 100 % );
     selected-normal-background:  rgba ( 224, 40, 41, 60 % );
     border-color:                rgba ( 224, 40, 41, 100 % );
+    border-radius:               5;
     spacing:                     4;
+    padding:                     4;
     separatorcolor:              rgba ( 29, 31, 33, 100 % );
     urgent-background:           rgba ( 29, 31, 33, 17 % );
     selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
