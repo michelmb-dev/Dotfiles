@@ -10,4 +10,18 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon>folder-search</icon>
+	<name>Recherche</name>
+	<unique-id>1656097968328562-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Recherche de fichier</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
 </actions>
