@@ -28,7 +28,7 @@ alert = #bd2c40
 ;--------------- BARS-----------------;
 
 [bar/Primary]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = DisplayPort-1
 width = 100%
 height = 35
 radius = 0
@@ -62,7 +62,7 @@ cursor-scroll = ns-resize
 ###################################################
 
 [bar/Secondary]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = DisplayPort-2
 width = 100%
 height = 35
 radius = 0
@@ -92,7 +92,7 @@ modules-right = date sysmenu
 ###################################################
 
 [bar/Tablet]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = HDMI-A-0
 width = 100%
 height = 35
 radius = 0
@@ -132,9 +132,11 @@ label-separator = |
 #---------- Module i3------------
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+format = <label-mode><label-state>
 index-sort = true
+enable-click = true
 wrapping-scroll = false
+fuzzy-match = true
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
@@ -144,27 +146,36 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %index% %icon%
 label-focused-background = #a70703
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %index% %icon%
 label-unfocused-padding = 4
 label-unfocused-background = ${colors.background}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %index% %icon%
 label-visible-background = ${self.label-unfocused-background}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %index% %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 4
 
-; Separator in between workspaces
-; label-separator = |
+
+ws-icon-0 = 1;
+ws-icon-2 = 2;
+ws-icon-1 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+
 
 
 [module/mpd]
@@ -268,7 +279,7 @@ type = custom/script
 tail = true
 label-padding = 0
 label-foreground = ${colors.foreground}
-exec = pulseaudio-control --sink-nickname "alsa_output.pci-0000_0a_00.1.hdmi-stereo: " --sink-nickname "alsa_output.pci-0000_0c_00.4.analog-stereo: " listen
+exec = pulseaudio-control --node-nickname "alsa_output.pci-0000_0a_00.1.hdmi-stereo: " --node-nickname "alsa_output.pci-0000_0c_00.4.analog-stereo: " listen
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control next-sink
